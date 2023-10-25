@@ -33,7 +33,7 @@ var Movie = function Movie(props) {
       { className: "col-4 col-md-3 mb-3" },
       React.createElement(
         "a",
-        { href: 'https://www.imdb.com/title/${imdbID}/', target: "_blank" },
+        { href: "https://www.imdb.com/title/" + imdbID + "/", target: "_blank" },
         React.createElement("img", { src: Poster, className: "img-fluid" })
       )
     ),
@@ -42,7 +42,7 @@ var Movie = function Movie(props) {
       { className: "col-8 col-md-9 mb-3" },
       React.createElement(
         "a",
-        { href: 'https://www.imdb.com/title/${imdbID}/', target: "_blank" },
+        { href: "https://www.imdb.com/title/" + imdbID + "/", target: "_blank" },
         React.createElement(
           "h4",
           null,

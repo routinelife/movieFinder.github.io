@@ -14,12 +14,12 @@ const Movie = (props) => {
   return (
     <div className = "row">
       <div className = "col-4 col-md-3 mb-3">
-        <a href={'https://www.imdb.com/title/${imdbID}/'} target="_blank">
+        <a href={`https://www.imdb.com/title/${imdbID}/`} target="_blank">
           <img src={Poster} className="img-fluid" />
         </a>        
       </div>
       <div className="col-8 col-md-9 mb-3">
-        <a href={'https://www.imdb.com/title/${imdbID}/'} target="_blank">
+        <a href={`https://www.imdb.com/title/${imdbID}/`} target="_blank">
           <h4>{Title}</h4>
           <p>{Type} | {Year}</p>
         </a>
@@ -27,6 +27,7 @@ const Movie = (props) => {
     </div>
   )
 }
+
 
 class MovieFinder extends React.Component {
   constructor(props) {
@@ -70,7 +71,6 @@ class MovieFinder extends React.Component {
       console.log(error);
     })
   }
-
   render() {
     const { searchTerm, results, error } = this.state;
 
@@ -102,7 +102,6 @@ class MovieFinder extends React.Component {
     )
   }
 }
-
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
